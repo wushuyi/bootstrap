@@ -26,6 +26,9 @@ Bootstrap includes six predefined button styles, each serving its own semantic p
 <!-- Indicates a successful or positive action -->
 <button type="button" class="btn btn-success">Success</button>
 
+<!-- Contextual button for informational alert messages -->
+<button type="button" class="btn btn-info">Info</button>
+
 <!-- Indicates caution should be taken with this action -->
 <button type="button" class="btn btn-warning">Warning</button>
 
@@ -63,6 +66,7 @@ In need of a button, but not the hefty background colors they bring? Replace the
 <button type="button" class="btn btn-primary-outline">Primary</button>
 <button type="button" class="btn btn-secondary-outline">Secondary</button>
 <button type="button" class="btn btn-success-outline">Success</button>
+<button type="button" class="btn btn-info-outline">Info</button>
 <button type="button" class="btn btn-warning-outline">Warning</button>
 <button type="button" class="btn btn-danger-outline">Danger</button>
 {% endexample %}
@@ -179,18 +183,3 @@ Note that pre-checked buttons require you to manually add the `.active` class to
 | Method | Description |
 | --- | --- |
 | `$().button('toggle')` |Toggles push state. Gives the button the appearance that it has been activated.  |
-| `$().button('reset')` | Resets button state—swaps text to original text. **This method is asynchronous and returns before the resetting has actually completed.** |
-| `$().button(string)` | Swaps text to any data defined text state. |
-
-### Custom state example
-
-{% highlight html %}
-<button type="button" id="myStateButton" data-complete-text="finished!" class="btn btn-primary" autocomplete="off">
-  ...
-</button>
-<script>
-  $('#myStateButton').on('click', function () {
-    $(this).button('complete') // button text will be "finished!"
-  })
-</script>
-{% endhighlight %}
